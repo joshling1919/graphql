@@ -6,7 +6,7 @@ GraphQL and Relay were created to solve a specific set of problems with GraphQL.
 REST-ful Routing: Given a collection of records on a server, there should be 
 a uniform URL and HTTP request method used to utilize that collection of records.
 
-![http methods](./images/http-methods.png)
+![http methods](./images/rest/http-methods.png)
 
 Let's talk about how to do a little more complicated example; for example,
 if we have to get a list of posts associated with a specific user. We have to
@@ -17,13 +17,13 @@ user 23's posts: `GET /users/23/posts`. If we want to fetch user 23's 14th post:
 ## Shortcomings of REST-ful routing
 Things start to get a little bit more weird with nested data types.
 
-![relational db difficulties](./images/relational-db.png)
+![relational db difficulties](./images/rest/relational-db.png)
 
-![restful challenges](./images/restful-challenges.png)
+![restful challenges](./images/rest/restful-challenges.png)
 
 One way that we could solve the problem of having to write highly customized
 endpoints is by doing something like this:
-![breaking rest conventions](./images/breaking-rest-conventions.png)
+![breaking rest conventions](./images/rest/breaking-rest-conventions.png)
 
 However, the above solution starts to break RESTful conventions.
 
@@ -32,3 +32,8 @@ example, maybe you only wanted the company name, but then you might now be
 serving back everything about the company.
 
 This is what GraphQL wants to fix.
+
+As a recap, 3 main issues:
+1. Difficulties with URL routing when data becomes nested.
+2. Potentially having to make too many http requests.
+3. Overfetching data
