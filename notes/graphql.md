@@ -25,7 +25,8 @@ Overall architecture of what we're going to build:
 
 (Web Page (GraphiQL)) <-GraphQL Query-> Express/GraphQL Server <--> Datastore
 
-GraphiQL: used solely for development; tool made by GraphQL team.
+GraphiQL: used solely for development; tool made by GraphQL team. allows us
+to make queries against our development server.
 
 Packages we installed for the `users` project:
 * Express: handling http request and making responses
